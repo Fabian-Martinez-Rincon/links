@@ -83,7 +83,7 @@ body::after {
 }
 
 .container {
-    width: min(100%, 640px);
+    width: min(100%, 720px);
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -222,7 +222,7 @@ main a {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 560px;
+    max-width: 660px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -355,7 +355,6 @@ main a:nth-child(4) .card { border-color: var(--accent-red) !important; }
 
 .card:hover h2 {
     color: #ffffff;
-    letter-spacing: 1px;
 }
 
 .card p {
