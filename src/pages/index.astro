@@ -1,0 +1,174 @@
+---
+import "../styles/style.css";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FaboSistemas</title>
+        <link
+            rel="icon"
+            href="https://fabianmartinezrincon.com/favicon/f.svg"
+            type="image/x-icon"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Aldrich&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <!-- Header -->
+            <header>
+                <div class="profile-image">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/55964635?v=4"
+                    />
+                </div>
+                <h1>Fabian Martinez Rincon</h1>
+                <p class="description">
+                   Particular de Informatica | Analista Programador Universitario | Data Engineer
+                </p>
+
+                <div class="social-links">
+                    <a
+                        href="https://www.youtube.com/@FabianMartinezRincon"
+                        title="YouTube"
+                        target="_blank"
+                    >
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a
+                        href="https://www.linkedin.com/in/fabian-martinez-rincon/"
+                        title="LinkedIn"
+                        target="_blank"
+                    >
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a
+                        href="https://github.com/Fabian-Martinez-Rincon"
+                        title="GitHub"
+                        target="_blank"
+                    >
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/fabosistemas/"
+                        title="Instagram"
+                        target="_blank"
+                    >
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                
+                </div>
+            </header>
+
+            <!-- Main Cards -->
+            <main>
+                <a
+                    href="https://fabianmartinezrincon.com/"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit;"
+                >
+                    <div class="card">
+                        <div class="icon">
+                            <img src="/Portafolio.png" alt="Portafolio" />
+                        </div>
+                        <div class="card-content">
+                            <h2>Portafolio</h2>
+                            <p>
+                                Proyectos, blogs, un poco sobre mi y mi experiencia laboral
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a
+                    href="https://github.com/Fabian-Martinez-Rincon/CADP-Programacion-1"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit;"
+                >
+                    <div class="card">
+                        <div class="icon">
+                            <img
+                                src="https://img.icons8.com/?size=100&id=12599&format=png&color=FFFFFF"
+                                alt="CodeMatrix"
+                            />
+                        </div>
+                        <div class="card-content">
+                            <h2>CADP | AyP 1</h2>
+                            <p>Practicas, Parciales, ejercicios de tiempo de ejecución para el final. Para CDO y Sistemas
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <a
+                    href="https://github.com/Fabian-Martinez-Rincon/Taller-de-Programacion"
+                    target="_blank"
+                    style="text-decoration: none; color: inherit;"
+                >
+                    <div class="card">
+                        <div class="icon">
+                            <img
+                                src="https://img.icons8.com/?size=100&id=12599&format=png&color=FFFFFF"
+                                alt="CodeMatrix"
+                            />
+                        </div>
+                        <div class="card-content">
+                            <h2>Taller de Programación | AyP 2</h2>
+                            <p>
+                            Apuntes, teorías, practicas, parciales, finales y toda la data que use para aprobar la materia.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+
+            </main>
+
+            <!-- YouTube Section -->
+            <section class="youtube-section">
+                <h2><i class="fas fa-video"></i> Último video de YouTube</h2>
+                <div class="video-container">
+                    <div class="video-embed">
+                        <iframe
+                            width="100%"
+                            height="315"
+                            src="https://www.youtube.com/embed/eBSd3jINKd4"
+                            title="¿Qué es Linux? El sistema operativo que domina el mundo"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                            style="border-radius: 8px;"
+                        >
+                        </iframe>
+                    </div>
+                </div>
+
+                <script>
+                    function copyLink() {
+                        const videoUrl =
+                            "https://www.youtube.com/watch?v=eBSd3jINKd4";
+                        navigator.clipboard.writeText(videoUrl).then(() => {
+                            alert("¡Vínculo copiado al portapapeles!");
+                        });
+                    }
+                </script>
+            </section>
+        </div>
+    </body>
+</html>
