@@ -1,5 +1,6 @@
 ---
 import "../styles/style.css";
+import fabosistemasPreview from "../assets/Portfolio.png";
 ---
 
 <!doctype html>
@@ -41,61 +42,66 @@ import "../styles/style.css";
                         decoding="async"
                     />
                 </div>
-                <h1>Fabian Martinez Rincon</h1>
-                <p class="description">
-                   Particular de Informatica | Analista Programador Universitario | Data Engineer
-                </p>
+                <div class="header-info">
+                    <h1>Fabian Martinez Rincon</h1>
+                    <p class="description">
+                       Particular de Informatica | Analista Programador Universitario | Data Engineer
+                    </p>
 
-                <div class="social-links">
-                    <a
-                        href="https://www.youtube.com/@FabianMartinezRincon"
-                        title="YouTube"
-                        target="_blank"
-                    >
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/fabian-martinez-rincon/"
-                        title="LinkedIn"
-                        target="_blank"
-                    >
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a
-                        href="https://github.com/Fabian-Martinez-Rincon"
-                        title="GitHub"
-                        target="_blank"
-                    >
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a
-                        href="https://www.instagram.com/fabosistemas/"
-                        title="Instagram"
-                        target="_blank"
-                    >
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                
+                    <div class="social-links">
+                        <a
+                            href="https://www.youtube.com/@FabianMartinezRincon"
+                            title="YouTube"
+                            target="_blank"
+                        >
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/fabian-martinez-rincon/"
+                            title="LinkedIn"
+                            target="_blank"
+                        >
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a
+                            href="https://github.com/Fabian-Martinez-Rincon"
+                            title="GitHub"
+                            target="_blank"
+                        >
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a
+                            href="https://www.instagram.com/fabosistemas/"
+                            title="Instagram"
+                            target="_blank"
+                        >
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                    </div>
                 </div>
             </header>
 
             <!-- Main Cards -->
             <main>
                 <a
-                    href="https://fabianmartinezrincon.com/"
+                    href="https://fabosistemas.com/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    class="site-banner"
                 >
-                    <div class="card">
-                        <div class="icon">
-                            <img src="/Portafolio.png" alt="Portafolio" loading="lazy" decoding="async" />
-                        </div>
-                        <div class="card-content">
-                            <h2>Portafolio</h2>
-                            <p>
-                                Proyectos personales y profesionales, artículos técnicos y mi recorrido en software y datos.
-                            </p>
-                        </div>
+                    <img
+                        src={fabosistemasPreview.src}
+                        alt="FaboSistemas"
+                        class="site-banner-img"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div class="site-banner-overlay">
+                        <h2>FaboSistemas</h2>
+                        <p>
+                            Clases de programación 1 a 1: entendé la materia, destrabá ejercicios y llegá a los parciales con acompañamiento personalizado.
+                        </p>
                     </div>
                 </a>
             </main>
