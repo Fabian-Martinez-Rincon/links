@@ -11,12 +11,12 @@
     --text-0: #f2f3f5;
     --text-1: #d3d6db;
     --text-2: #9da3aa;
-    --accent-blue: #5f86e8;
-    --accent-yellow: #d9b466;
-    --accent-red: #d26a6a;
-    --accent-blue-soft: rgba(95, 134, 232, 0.24);
-    --accent-yellow-soft: rgba(217, 180, 102, 0.24);
-    --accent-red-soft: rgba(210, 106, 106, 0.24);
+    --accent-blue: #3d7bf5;
+    --accent-yellow: #7db2f7;
+    --accent-red: #1e4fd1;
+    --accent-blue-soft: rgba(61, 123, 245, 0.24);
+    --accent-yellow-soft: rgba(125, 178, 247, 0.24);
+    --accent-red-soft: rgba(30, 79, 209, 0.24);
     --border-soft: rgba(255, 255, 255, 0.14);
     --border-strong: rgba(255, 255, 255, 0.28);
     --shadow-soft: rgba(0, 0, 0, 0.35);
@@ -25,9 +25,9 @@
 body {
     font-family: "Aldrich", sans-serif;
     background:
-        radial-gradient(circle at 14% 22%, rgba(217, 180, 102, 0.16) 0%, rgba(217, 180, 102, 0) 42%),
-        radial-gradient(circle at 86% 18%, rgba(95, 134, 232, 0.16) 0%, rgba(95, 134, 232, 0) 44%),
-        radial-gradient(circle at 54% 100%, rgba(210, 106, 106, 0.1) 0%, rgba(210, 106, 106, 0) 46%),
+        radial-gradient(circle at 14% 22%, rgba(125, 178, 247, 0.16) 0%, rgba(125, 178, 247, 0) 42%),
+        radial-gradient(circle at 86% 18%, rgba(61, 123, 245, 0.16) 0%, rgba(61, 123, 245, 0) 44%),
+        radial-gradient(circle at 54% 100%, rgba(30, 79, 209, 0.1) 0%, rgba(30, 79, 209, 0) 46%),
         linear-gradient(160deg, var(--bg-0) 0%, #0f1012 45%, var(--bg-1) 100%);
     color: var(--text-0);
     min-height: 100vh;
@@ -45,13 +45,13 @@ body::before {
     top: 22%;
     left: max(8px, calc(50% - 700px));
     padding: 0;
-    border: 1px solid rgba(217, 180, 102, 0.18);
+    border: 1px solid rgba(125, 178, 247, 0.18);
     border-radius: 24px;
     opacity: 0.24;
     background:
         linear-gradient(135deg, rgba(20, 21, 24, 0.22) 0%, rgba(14, 15, 18, 0.16) 100%),
-        linear-gradient(90deg, transparent 18%, rgba(217, 180, 102, 0.2) 18% 19%, transparent 19% 81%, rgba(217, 180, 102, 0.2) 81% 82%, transparent 82%);
-    box-shadow: 0 0 14px rgba(217, 180, 102, 0.07);
+        linear-gradient(90deg, transparent 18%, rgba(125, 178, 247, 0.2) 18% 19%, transparent 19% 81%, rgba(125, 178, 247, 0.2) 81% 82%, transparent 82%);
+    box-shadow: 0 0 14px rgba(125, 178, 247, 0.07);
     animation: shapeFloat 7s ease-in-out infinite;
     pointer-events: none;
     z-index: 0;
@@ -106,7 +106,7 @@ header {
     width: clamp(90px, 18vw, 120px);
     height: clamp(90px, 18vw, 120px);
     margin: 0 auto clamp(14px, 3vw, 20px);
-    background: linear-gradient(135deg, rgba(95, 134, 232, 0.2) 0%, rgba(210, 106, 106, 0.16) 100%);
+    background: linear-gradient(135deg, rgba(61, 123, 245, 0.2) 0%, rgba(30, 79, 209, 0.16) 100%);
     border-radius: 50%;
     border: 3px solid transparent;
     background-clip: padding-box;
@@ -116,8 +116,8 @@ header {
     justify-content: center;
     font-size: 60px;
     box-shadow:
-        0 0 22px rgba(95, 134, 232, 0.22),
-        0 0 16px rgba(217, 180, 102, 0.18),
+        0 0 22px rgba(61, 123, 245, 0.22),
+        0 0 16px rgba(125, 178, 247, 0.18),
         inset 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
@@ -228,9 +228,79 @@ main a {
 }
 
 main a:nth-child(1) .card { border-color: var(--accent-red) !important; }
-main a:nth-child(2) .card { border-color: var(--accent-blue) !important; }
-main a:nth-child(3) .card { border-color: var(--accent-yellow) !important; }
-main a:nth-child(4) .card { border-color: var(--accent-red) !important; }
+
+/* Section headings (shared by whatsapp + repos sections) */
+.whatsapp-section,
+.repos-section {
+    margin-top: clamp(24px, 5vw, 36px);
+}
+
+.whatsapp-section h2,
+.repos-section h2 {
+    font-size: clamp(1rem, 3vw, 1.15rem);
+    text-align: center;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--accent-yellow) 0%, #f3f4f6 45%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* WhatsApp Section */
+.whatsapp-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    width: 100%;
+    max-width: 660px;
+    margin: 0 auto;
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2.2vw, 0.88rem);
+    font-weight: 600;
+    color: #25d366;
+    padding: clamp(12px, 2.6vw, 14px) clamp(14px, 3vw, 18px);
+    border-radius: 10px;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.35);
+    transition: all 0.3s;
+}
+
+.whatsapp-button i {
+    font-size: 1.1em;
+}
+
+.whatsapp-button:hover {
+    color: #ffffff;
+    background: rgba(37, 211, 102, 0.22);
+    border-color: rgba(37, 211, 102, 0.6);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.22);
+    transform: translateY(-2px);
+}
+
+/* Repos Section */
+.repos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.repos-grid a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.repos-grid a:nth-child(1) .card { border-color: var(--accent-blue) !important; }
+.repos-grid a:nth-child(2) .card { border-color: var(--accent-yellow) !important; }
+.repos-grid a:nth-child(3) .card { border-color: var(--accent-red) !important; }
+.repos-grid a:nth-child(4) .card { border-color: var(--accent-blue) !important; }
 
 /* Efecto de grid tecnológico */
 .card::before {
